@@ -15,6 +15,7 @@ import Footer from './Footer';
 import post1 from './blog-post.1.md';
 import post2 from './blog-post.2.md';
 import post3 from './blog-post.3.md';
+import { green, purple } from '@mui/material/colors';
 
 const sections = [
   { title: 'Technology', url: '#' },
@@ -83,7 +84,20 @@ const sidebar = {
   ],
 };
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: green[500],
+    },
+    secondary: {
+      main: green[500],
+    },
+  },
+  background: {
+    default: '#e21818',
+    paper: '#3f3e3e',
+  },
+});
 
 export default function Blog() {
   return (
